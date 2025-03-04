@@ -1,5 +1,5 @@
 import type { PieceLego } from "./PieceLego";
-import { tousLesPieces, produits } from "./data";
+import { tousLesPieces, produits } from "./data.ts";
 import { ref } from "vue";
 
 export const ajouterProduit = (produit: PieceLego) => {
