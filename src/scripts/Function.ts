@@ -34,7 +34,9 @@ export const ouvrirFormulaireModification = (produit: PieceLego) => {
 };
 
 export const modifierProduit = (produit: PieceLego) => {
-  const index = produits.value.findIndex((p) => p.id === produit.id);
+  const index = produits.value.findIndex(
+    (produit: PieceLego) => produit.id === produit.id
+  );
   if (index !== -1) {
     produits.value[index] = produit;
   }
