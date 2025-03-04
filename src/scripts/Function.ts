@@ -1,5 +1,5 @@
 import type { PieceLego } from "./PieceLego";
-import { tousLesPieces, produits } from "../scripts/data";
+import { tousLesPieces, produits } from "./data";
 import { ref } from "vue";
 
 export const ajouterProduit = (produit: PieceLego) => {
@@ -11,7 +11,9 @@ export const ajouterProduit = (produit: PieceLego) => {
 };
 
 export const supprimerProduit = (id: number) => {
-  tousLesPieces.value = tousLesPieces.value.filter((p) => p.id !== id);
+  tousLesPieces.value = tousLesPieces.value.filter(
+    (produit: PieceLego) => produit.id !== id
+  );
   produits.value = [...tousLesPieces.value];
 };
 
@@ -19,8 +21,8 @@ export const filtrerProduits = (searchTerm: string) => {
   if (!searchTerm.trim()) {
     produits.value = [...tousLesPieces.value];
   } else {
-    produits.value = tousLesPieces.value.filter((p) =>
-      p.nom.toLowerCase().includes(searchTerm.toLowerCase())
+    produits.value = tousLesPieces.value.filter((produit: PieceLego) =>
+      produit.nom.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }
 };
