@@ -1,10 +1,7 @@
 <script lang="ts" setup>
 import { defineProps, defineEmits, ref } from "vue";
 import type { PieceLego } from "../scripts/PieceLego";
-
-const props = defineProps<{
-  produits: PieceLego[];
-}>();
+const { produits } = defineProps<{ produits: PieceLego[] }>();
 
 const emit = defineEmits<{
   (e: "supprimer", id: number): void;
