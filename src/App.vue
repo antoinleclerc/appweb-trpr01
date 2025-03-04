@@ -5,7 +5,7 @@ import FormulaireAjout from "./components/FormulaireAjout.vue";
 import ExporterFormatCSV from "./components/ExporterFormatCSV.vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
-import { produits } from "./scripts/data";
+import { produits } from "./scripts/Database";
 import {
   ajouterProduit,
   filtrerProduits,
